@@ -1,0 +1,134 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-container.part-selector-modal {
+    background-color: var(--background-secondary);
+    width: 100%;
+    max-width: 550px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.close-button {
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+
+.modal-body {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.modal-search-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: var(--background-tertiary);
+}
+
+.part-list-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+}
+
+.part-list-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px;
+    border-bottom: 1px solid var(--border-primary);
+    cursor: pointer;
+}
+.part-list-item:last-child {
+    border-bottom: none;
+}
+
+.part-list-item:hover {
+    background-color: var(--background-tertiary);
+}
+
+.part-list-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+}
+
+.part-info {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.part-name {
+    font-weight: 600;
+}
+.part-variant {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.part-price {
+    font-weight: 600;
+    color: var(--primary-accent);
+}
+
+.modal-footer {
+    padding: 16px 24px;
+    border-top: 1px solid var(--border-primary);
+    display: flex;
+    justify-content: flex-end;
+}
+
+.confirm-button {
+    background-color: var(--primary-accent);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.confirm-button:hover {
+    background-color: var(--primary-accent-hover);
+}
+
+.confirm-button:disabled {
+    background-color: var(--background-tertiary);
+    color: var(--text-secondary);
+    cursor: not-allowed;
+} 

@@ -1,0 +1,74 @@
+.shop-header-nav {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5e5;
+  padding: 0 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.logo a {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #111;
+  text-decoration: none;
+}
+
+.main-nav {
+  display: flex;
+  gap: 35px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+  color: var(--primary-color, #00B37A);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+.action-icon {
+  position: relative;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.action-icon:hover {
+  color: var(--primary-color, #00B37A);
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background-color: var(--primary-color, #00B37A);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: bold;
+} 

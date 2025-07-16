@@ -1,0 +1,74 @@
+.sold-items-page-container {
+    padding: 24px;
+}
+
+.sold-items-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.sold-items-header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+.search-and-profit-container {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.search-bar-sold-items {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar-sold-items .search-icon {
+    position: absolute;
+    left: 15px;
+    color: var(--text-secondary);
+}
+
+.search-bar-sold-items input {
+    width: 300px;
+    padding: 12px 20px 12px 40px; /* Left padding for icon */
+    border-radius: 8px;
+    border: 1px solid var(--border-primary);
+    background-color: var(--background-secondary);
+    color: var(--text-primary);
+    font-size: 14px;
+    transition: all 0.2s ease-in-out;
+}
+
+.search-bar-sold-items input:focus {
+    outline: none;
+    border-color: var(--primary-accent);
+}
+
+.total-profit-display {
+    background-color: var(--background-secondary);
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--border-primary);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.total-profit-display span {
+    font-weight: 700;
+    color: #28a745; /* Green for profit */
+}
+
+.sold-items-list-container {
+    background-color: var(--background-secondary);
+    border-radius: 12px;
+    padding: 24px;
+    border: 1px solid var(--border-primary);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
+} 

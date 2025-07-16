@@ -1,0 +1,148 @@
+.info-card {
+  flex: 1;
+  background-color: var(--background-secondary);
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid var(--border-primary);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.01);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .info-card {
+    flex: none; /* Remove flex-grow behavior on mobile */
+  }
+}
+
+.info-card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.info-card-icon {
+  font-size: 18px;
+  color: var(--primary-accent);
+}
+
+.info-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.info-card-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Styles for "Oversigt" card */
+.info-item-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-item label {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.info-item span {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+
+/* Styles for "Seneste Aktivitet" card */
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.activity-item {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+.activity-name {
+  color: var(--text-primary);
+}
+.activity-status {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Styles for "Seneste Aktivitet" card */
+.activity-group {
+    padding-bottom: 0.75rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.activity-group:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.activity-group-header {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
+/* Styles for "Hurtige Links" card */
+.quick-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  text-decoration: none;
+  color: var(--text-primary);
+  font-weight: 500;
+  border-bottom: 1px solid var(--border-primary);
+  transition: color 0.2s ease-in-out;
+}
+.quick-link:first-of-type {
+  padding-top: 0;
+}
+.quick-link:last-of-type {
+    border-bottom: none;
+}
+.quick-link:hover {
+  color: var(--primary-accent);
+}
+
+.add-button-subtle {
+    margin-top: auto; /* Pushes to the bottom */
+    padding: 10px 0;
+    background: none;
+    border: none;
+    color: var(--primary-accent);
+    font-weight: 500;
+    cursor: pointer;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+} 

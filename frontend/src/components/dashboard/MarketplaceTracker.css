@@ -1,0 +1,321 @@
+.marketplace-tracker-container {
+  background-color: var(--background-secondary);
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid var(--border-primary);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
+  margin-top: 24px;
+}
+
+.tracker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.tracker-header h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.add-bid-button {
+  background-color: var(--primary-accent);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.add-bid-button:hover {
+  background-color: var(--primary-accent-hover);
+}
+
+.scrape-section {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--border-primary);
+}
+
+.scrape-section input {
+  flex-grow: 1;
+  padding: 12px;
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  font-size: 14px;
+  background-color: var(--background-tertiary);
+  color: var(--text-primary);
+}
+
+.scrape-section button {
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: #198754;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  white-space: nowrap;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.scrape-section button:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+.bid-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.bid-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: -8px; /* Reduce gap between label and input */
+}
+
+.bid-form input,
+.bid-form select,
+.bid-form textarea {
+    padding: 12px;
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: var(--background-tertiary);
+    color: var(--text-primary);
+    font-family: inherit; /* Ensure textarea uses the same font */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.bid-form button {
+    padding: 14px;
+    border-radius: 8px;
+    background-color: var(--primary-accent);
+    color: white;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.bid-form button:hover {
+    background-color: var(--primary-accent-hover);
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.form-row > input {
+    width: 100%;
+}
+
+.bid-form select {
+    margin-bottom: 1rem;
+}
+
+/* New styles for input with integrated button */
+.input-with-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    gap: -1px; /* To make them touch */
+}
+
+.input-with-button input {
+    flex-grow: 1;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    margin-bottom: 0; /* Override default margin */
+}
+
+.input-with-button .find-price-button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    height: 100%; /* Match input height */
+    white-space: nowrap;
+}
+
+.tracker-list-header {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    padding: 0 1rem 8px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--border-primary);
+}
+
+.header-item:last-child {
+    text-align: right;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.delete-button-modal {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.delete-button-modal:hover {
+    background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+    .tracker-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .tracker-list-header {
+        display: none;
+    }
+
+    .scrape-section,
+    .input-with-button {
+        flex-direction: column;
+    }
+    
+    .form-row {
+        display: block;
+    }
+
+    .form-row > input {
+        margin-bottom: 16px;
+    }
+    
+    .form-row > input:last-child {
+        margin-bottom: 0;
+    }
+
+    .input-with-button {
+        gap: 16px; /* Add gap between stacked items */
+    }
+
+    .input-with-button input,
+    .input-with-button .find-price-button {
+        border-radius: 8px; /* Reset border radius */
+        width: 100%;
+    }
+} 
+
+.bid-form .form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.input-with-button,
+.input-with-suggestion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-with-button input,
+.input-with-suggestion input {
+    flex-grow: 1;
+}
+
+.find-price-button,
+.suggest-price-button {
+    padding: 12px 15px;
+    background-color: #6c757d; /* A neutral, secondary color */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+}
+
+.find-price-button:hover,
+.suggest-price-button:hover {
+    background-color: #5a6268;
+}
+
+.suggestion-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #e6f7ff;
+    padding: 10px 15px;
+    border-radius: 6px;
+    margin: 10px 0;
+    border: 1px solid #b3e0ff;
+}
+
+.suggestion-display p {
+    margin: 0;
+    font-size: 1rem;
+    color: #0056b3;
+}
+
+.suggestion-display strong {
+    font-weight: 700;
+}
+
+.suggestion-display button {
+    padding: 6px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.suggestion-display button:hover {
+    background-color: #0056b3;
+}
+
+.sale-price-section {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.sale-price-section label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    display: block;
+} 

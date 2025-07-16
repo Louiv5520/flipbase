@@ -1,0 +1,84 @@
+.inventory-page-container {
+    padding: 24px;
+}
+
+.inventory-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.inventory-header h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.inventory-tabs {
+    display: flex;
+    gap: 8px;
+    background-color: var(--background-tertiary);
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.tab-button {
+    padding: 8px 16px;
+    border: none;
+    background-color: transparent;
+    color: var(--text-secondary);
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.tab-button.active {
+    background-color: var(--background-secondary);
+    color: var(--text-primary);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.inventory-list-container {
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+    padding: 24px;
+    border: 1px solid var(--border-primary);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.01);
+}
+
+.inventory-list-header {
+    display: grid;
+    grid-template-columns: 2fr 3fr 1fr;
+    padding: 0 1rem 12px;
+    margin-bottom: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    border-bottom: 2px solid var(--border-primary);
+    gap: 16px;
+    align-items: center; /* Ensure vertical alignment matches rows */
+}
+
+.header-item-product,
+.header-item-parts {
+    text-align: left;
+}
+
+.header-item-details {
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .inventory-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .inventory-list-header {
+        display: none; /* Hide header on mobile, info is in the item */
+    }
+} 

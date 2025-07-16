@@ -1,0 +1,43 @@
+:root {
+  --background-primary: #f0f2f5;
+  --background-secondary: #ffffff;
+  --background-tertiary: #e4e6eb;
+  --background-hover: #e4e6eb;
+  --text-primary: #050505;
+  --text-secondary: #65676b;
+  --text-link: #0064e0;
+  --border-primary: #ced0d4;
+  --primary-accent: #1877f2;
+  --primary-accent-hover: #166fe5;
+}
+
+.dark {
+  --background-primary: #18191a;
+  --background-secondary: #242526;
+  --background-tertiary: #3a3b3c;
+  --background-hover: #4e4f50;
+  --text-primary: #e4e6eb;
+  --text-secondary: #b0b3b8;
+  --text-link: #2d88ff;
+  --border-primary: #3a3b3c;
+  --primary-accent: #2d88ff;
+  --primary-accent-hover: #1b74e8;
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--background-primary);
+  color: var(--text-primary);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} 

@@ -1,0 +1,5 @@
+.App {
+  /* text-align: center; was here, but it can interfere with component layouts */
+  background-color: var(--background-primary);
+  min-height: 100vh;
+} 

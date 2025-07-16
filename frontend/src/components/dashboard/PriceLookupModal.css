@@ -1,0 +1,128 @@
+.price-lookup-container {
+    padding: 1rem;
+}
+
+.price-lookup-container h2 {
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.price-lookup-search {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+.category-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.category-button {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-size: 0.9rem;
+}
+
+.category-button:hover {
+    background-color: #e0e0e0;
+    border-color: #bbb;
+}
+
+.category-button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.price-lookup-list {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #eee;
+    border-radius: 8px;
+}
+
+.price-lookup-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    gap: 1rem; /* Add gap for spacing */
+}
+
+.price-lookup-item.selected {
+    background-color: #e6f7ff;
+}
+
+.item-checkbox {
+    pointer-events: none; /* Make checkbox non-interactive directly */
+}
+
+.price-lookup-item:last-child {
+    border-bottom: none;
+}
+
+.price-lookup-item:hover {
+    background-color: #f9f9f9;
+}
+
+.item-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.item-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.item-variant {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.item-price {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #007bff;
+    margin-left: auto; /* Push price to the far right */
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1.5rem;
+    border-top: 1px solid #eee;
+    margin-top: 1rem;
+}
+
+.add-selected-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.add-selected-button:hover {
+    background-color: #0056b3;
+} 

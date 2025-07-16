@@ -1,0 +1,12 @@
+.info-cards-container {
+  display: flex;
+  gap: 24px;
+  margin-top: 24px;
+  align-items: stretch; /* Make cards same height */
+}
+
+@media (max-width: 768px) {
+  .info-cards-container {
+    flex-direction: column;
+  }
+} 

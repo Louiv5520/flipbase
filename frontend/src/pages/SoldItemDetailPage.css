@@ -1,0 +1,120 @@
+.sold-item-detail-page {
+    padding: 24px;
+}
+
+.sold-item-detail-page h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 24px;
+}
+
+.detail-container {
+    background-color: var(--background-secondary);
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid var(--border-primary);
+}
+
+.buyer-info-form h2 {
+    font-size: 20px;
+    color: var(--text-primary);
+    border-bottom: 1px solid var(--border-primary);
+    padding-bottom: 12px;
+    margin-bottom: 24px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.buyer-info-form .form-group {
+    margin-bottom: 16px;
+    position: relative; /* Needed for absolute positioning of suggestions */
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.buyer-info-form label {
+    display: block;
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.buyer-info-form input,
+.buyer-info-form textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: var(--background-tertiary);
+    color: var(--text-primary);
+    box-sizing: border-box;
+}
+
+.buyer-info-form textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.save-button {
+    background-color: var(--primary-accent);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 16px;
+    transition: background-color 0.2s;
+    margin-top: 16px;
+}
+
+.save-button:hover {
+    background-color: var(--primary-accent-hover);
+}
+
+.suggestions-list {
+    list-style: none;
+    padding: 0;
+    margin: 4px 0 0;
+    position: absolute;
+    width: 100%;
+    background-color: var(--background-secondary);
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    z-index: 10;
+    max-height: 250px;
+    overflow-y: auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.suggestions-list li {
+    padding: 12px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--border-primary);
+}
+
+.suggestions-list li:last-child {
+    border-bottom: none;
+}
+
+.suggestions-list li:hover {
+    background-color: var(--background-tertiary);
+}
+
+.suggestions-list li strong {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.suggestions-list li small {
+    color: var(--text-secondary);
+} 

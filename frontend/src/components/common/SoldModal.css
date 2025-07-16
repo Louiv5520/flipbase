@@ -1,0 +1,72 @@
+.sold-modal-container h2 {
+    color: var(--text-primary);
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+
+.sold-modal-container p {
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+}
+
+.sold-modal-container .form-group {
+    margin-bottom: 24px;
+}
+
+.sold-modal-container label {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.sold-modal-container input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid var(--border-primary);
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: var(--background-tertiary);
+    color: var(--text-primary);
+    box-sizing: border-box;
+}
+
+.sold-modal-container input:focus {
+    outline: none;
+    border-color: var(--primary-accent);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.modal-actions button {
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.modal-actions .cancel-button {
+    background-color: var(--background-tertiary);
+    color: var(--text-primary);
+}
+
+.modal-actions .cancel-button:hover {
+    background-color: var(--background-hover);
+}
+
+.modal-actions .confirm-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.modal-actions .confirm-button:hover {
+    background-color: #218838;
+} 

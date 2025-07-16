@@ -1,0 +1,215 @@
+.sold-item-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background-secondary);
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border-primary);
+    margin-bottom: 16px;
+    transition: box-shadow 0.2s, border-color 0.2s;
+    cursor: pointer;
+}
+
+.sold-item-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border-color: var(--primary-accent);
+}
+
+.sold-item-main-content {
+    display: flex;
+    align-items: center;
+    gap: 48px; /* Increased gap */
+    flex-grow: 1; /* Allow this to grow */
+    min-width: 0; /* Important for flex items to shrink properly */
+}
+
+.sold-item-product-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    min-width: 250px; /* Give it a minimum width */
+}
+
+.sold-item-image {
+    width: 50px; /* Slightly smaller image */
+    height: 50px;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+.sold-item-name-date {
+    display: flex;
+    flex-direction: column;
+}
+
+.sold-item-name {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.sold-item-date {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+/* New styles for actors */
+.sold-item-actors {
+    display: flex;
+    gap: 24px;
+}
+
+.actor-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.actor-label {
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 2px;
+}
+
+.actor-name {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.sold-item-flaws {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-start;
+    min-width: 0; /* Prevent overflow issues */
+}
+
+.flaw-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.flaw-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: var(--background-tertiary);
+  padding: 4px 10px;
+  border-radius: 16px;
+  font-size: 13px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  border: 1px solid var(--border-primary);
+}
+
+.flaw-tag svg {
+  font-size: 12px;
+}
+
+.no-flaws-text {
+  font-size: 14px;
+  color: var(--text-secondary);
+  font-style: italic;
+  align-self: center;
+}
+
+.actor-profile-picture {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--background-tertiary);
+    margin-left: 24px; /* Add margin to separate from financials */
+}
+
+.actor-profile-placeholder {
+    width: 32px;
+    height: 32px;
+    margin-left: 24px;
+}
+
+
+.sold-item-financials {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+}
+
+.financial-item {
+    text-align: right;
+}
+
+.financial-label {
+    display: block;
+    font-size: 12px;
+    color: var(--text-secondary);
+    margin-bottom: 4px;
+    text-transform: uppercase;
+}
+
+.financial-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.financial-value.sold-price {
+    color: #28a745;
+}
+
+.financial-value.positive-profit {
+    color: #28a745;
+}
+
+.financial-value.negative-profit {
+    color: #dc3545;
+}
+
+.financial-item.profit {
+    border-left: 2px solid var(--border-primary);
+    padding-left: 24px;
+}
+
+@media (max-width: 900px) {
+    .sold-item-card, .sold-item-main-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 24px;
+    }
+
+    .sold-item-financials {
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-between;
+        border-top: 1px solid var(--border-primary);
+        padding-top: 16px;
+    }
+
+    .financial-item {
+        text-align: left;
+    }
+
+    .financial-item.profit {
+        border-left: none;
+        padding-left: 0;
+        width: 100%;
+        margin-top: 16px;
+        padding-top: 16px;
+        border-top: 1px dashed var(--border-primary);
+        text-align: center;
+    }
+
+    .financial-item.profit .financial-label {
+        font-size: 16px;
+    }
+
+     .financial-item.profit .financial-value {
+        font-size: 20px;
+    }
+
+    .actor-profile-picture, .actor-profile-placeholder {
+        margin-left: 0;
+        margin-top: 16px;
+    }
+}
