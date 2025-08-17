@@ -7,7 +7,18 @@ const User = require('./models/User');
 const bcrypt = require('bcryptjs');
 
 const app = express();
-app.use(cors());
+// Configure CORS to allow requests from frontend
+app.use(cors({
+  origin: [
+    'https://flipbase.onrender.com',
+    'https://flipbase.dk',
+    'https://www.flipbase.dk',
+    'http://localhost:3000' // For local development
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'x-auth-token', 'Authorization']
+}));
 app.use(express.json());
 
 // This is needed for express to get the client's IP address
