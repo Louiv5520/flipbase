@@ -36,20 +36,20 @@ sudo chmod +x /usr/local/bin/docker-compose
 # Genstart session eller log ud/ind igen
 ```
 
-### 2. Klon projektet
+### 2. Klon projektet fra GitHub
 ```bash
 # Opret projekt mappe
 mkdir -p /opt/flipbase
 cd /opt/flipbase
 
-# Klon eller kopier projekt filer her
-# (kopier hele Iwoweb mappen til denne lokation)
+# Klon fra GitHub
+git clone https://github.com/dit-username/flipbase.git .
 ```
 
 ### 3. Konfigurer miljøvariabler
 ```bash
-# Opret .env filer
-cp backend/config/.env.example backend/config/.env
+# Kopier environment template
+cp backend/config/env.example backend/config/.env
 
 # Rediger .env fil med dine værdier
 nano backend/config/.env
@@ -117,6 +117,9 @@ sudo cp -r certbot/conf certbot-backup-$(date +%Y%m%d)
 
 ### Updates
 ```bash
+# Opdater fra GitHub
+git pull origin main
+
 # Opdater images
 docker-compose pull
 

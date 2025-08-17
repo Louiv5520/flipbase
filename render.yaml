@@ -1,0 +1,34 @@
+services:
+  - type: web
+    name: iwoweb-frontend
+    env: docker
+    dockerfilePath: ./frontend/Dockerfile
+    dockerContext: ./frontend
+    dockerCommand: nginx -g "daemon off;"
+    envVars:
+      - key: NODE_ENV
+        value: production
+    healthCheckPath: /
+    autoDeploy: true
+
+  - type: web
+    name: iwoweb-backend
+    env: docker
+    dockerfilePath: ./backend/Dockerfile
+    dockerContext: ./backend
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        sync: false
+      - key: PORT
+        value: 5000
+    healthCheckPath: /api/health
+    autoDeploy: true
+
+databases:
+  - name: iwoweb-mongodb
+    databaseName: iwoweb
+    user: iwoweb

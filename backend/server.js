@@ -50,6 +50,14 @@ app.get('/', (req, res) => {
   res.send('Backend is running');
 });
 
+app.get('/api/health', (req, res) => {
+  res.status(200).json({ 
+    status: 'OK', 
+    message: 'Backend is healthy',
+    timestamp: new Date().toISOString()
+  });
+});
+
 // Define Routes
 app.use('/api/auth', require('./routes/auth'));
 app.use('/api/users', require('./routes/users'));

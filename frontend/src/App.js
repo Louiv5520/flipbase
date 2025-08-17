@@ -29,94 +29,94 @@ function App() {
   return (
     <Router>
       <AnalyticsWrapper>
-        <div className={`App ${theme}`}>
-          <Routes>
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/" element={<ShopPage />} /> {/* Webshop is now the front page */}
-            <Route path="/about" element={<AboutUsPage />} />
-            <Route path="/cart" element={<CartPage />} />
+      <div className={`App ${theme}`}>
+        <Routes>
+          <Route path="/login" element={<LoginPage />} />
+          <Route path="/" element={<ShopPage />} /> {/* Webshop is now the front page */}
+          <Route path="/about" element={<AboutUsPage />} />
+          <Route path="/cart" element={<CartPage />} />
 
-            {/* CRM Routes */}
-            <Route 
-              path="/crm" 
-              element={
-                <PrivateRoute>
-                  <DashboardLayout>
-                    <ProfilePage />
-                  </DashboardLayout>
-                </PrivateRoute>
-              } 
-            />
-            <Route 
-              path="/crm/prices" 
-              element={
-                <PrivateRoute>
-                  <DashboardLayout>
-                    <PriceListPage />
-                  </DashboardLayout>
-                </PrivateRoute>
-              } 
-            />
-            <Route 
-              path="/crm/lager" 
-              element={
-                <PrivateRoute>
-                  <DashboardLayout>
-                    <InventoryPage />
-                  </DashboardLayout>
-                </PrivateRoute>
-              } 
-            />
-            <Route 
-              path="/crm/sold" 
-              element={
-                <PrivateRoute>
-                  <DashboardLayout>
-                    <SoldItemsPage />
-                  </DashboardLayout>
-                </PrivateRoute>
-              } 
-            />
-            <Route 
-              path="/crm/sold/:id" 
-              element={
-                <PrivateRoute>
-                  <DashboardLayout>
-                    <SoldItemDetailPage />
-                  </DashboardLayout>
-                </PrivateRoute>
-              } 
-            />
-            <Route 
-              path="/crm/account" 
-              element={
-                <PrivateRoute>
-                  <DashboardLayout>
-                    <AccountPage />
-                  </DashboardLayout>
-                </PrivateRoute>
-              } 
-            />
-            <Route 
-              path="/crm/settings" 
-              element={
-                <PrivateRoute>
-                  <DashboardLayout>
-                    <SettingsPage />
-                  </DashboardLayout>
-                </PrivateRoute>
-              } 
-            />
-            <Route 
-              path="/crm/users" 
-              element={
-                <PrivateRoute>
-                  <DashboardLayout>
-                    <UserManagementPage />
-                  </DashboardLayout>
-                </PrivateRoute>
-              } 
-            />
+          {/* CRM Routes */}
+          <Route 
+            path="/crm" 
+            element={
+              <PrivateRoute>
+                <DashboardLayout>
+                  <ProfilePage />
+                </DashboardLayout>
+              </PrivateRoute>
+            } 
+          />
+          <Route 
+            path="/crm/prices" 
+            element={
+              <PrivateRoute>
+                <DashboardLayout>
+                  <PriceListPage />
+                </DashboardLayout>
+              </PrivateRoute>
+            } 
+          />
+          <Route 
+            path="/crm/lager" 
+            element={
+              <PrivateRoute>
+                <DashboardLayout>
+                  <InventoryPage />
+                </DashboardLayout>
+              </PrivateRoute>
+            } 
+          />
+          <Route 
+            path="/crm/sold" 
+            element={
+              <PrivateRoute>
+                <DashboardLayout>
+                  <SoldItemsPage />
+                </DashboardLayout>
+              </PrivateRoute>
+            } 
+          />
+          <Route 
+            path="/crm/sold/:id" 
+            element={
+              <PrivateRoute>
+                <DashboardLayout>
+                  <SoldItemDetailPage />
+                </DashboardLayout>
+              </PrivateRoute>
+            } 
+          />
+          <Route 
+            path="/crm/account" 
+            element={
+              <PrivateRoute>
+                <DashboardLayout>
+                  <AccountPage />
+                </DashboardLayout>
+              </PrivateRoute>
+            } 
+          />
+          <Route 
+            path="/crm/settings" 
+            element={
+              <PrivateRoute>
+                <DashboardLayout>
+                  <SettingsPage />
+                </DashboardLayout>
+              </PrivateRoute>
+            } 
+          />
+          <Route 
+            path="/crm/users" 
+            element={
+              <PrivateRoute>
+                <DashboardLayout>
+                  <UserManagementPage />
+                </DashboardLayout>
+              </PrivateRoute>
+            } 
+          />
             <Route 
               path="/crm/analytics" 
               element={
@@ -127,8 +127,8 @@ function App() {
                 </PrivateRoute>
               } 
             />
-          </Routes>
-        </div>
+        </Routes>
+      </div>
       </AnalyticsWrapper>
     </Router>
   );
