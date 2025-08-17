@@ -1,18 +1,19 @@
 services:
+  # Frontend Static Site
   - type: web
-    name: iwoweb-frontend
-    env: docker
-    dockerfilePath: ./frontend/Dockerfile
-    dockerContext: ./frontend
-    dockerCommand: nginx -g "daemon off;"
+    name: flipbase-frontend
+    env: static
+    buildCommand: cd frontend && npm run build
+    staticPublishPath: frontend/build
     envVars:
       - key: NODE_ENV
         value: production
-    healthCheckPath: /
-    autoDeploy: true
+      - key: REACT_APP_API_URL
+        value: https://flipbase-backend.onrender.com
 
+  # Backend API
   - type: web
-    name: iwoweb-backend
+    name: flipbase-backend
     env: docker
     dockerfilePath: ./backend/Dockerfile
     dockerContext: ./backend
@@ -29,6 +30,6 @@ services:
     autoDeploy: true
 
 databases:
-  - name: iwoweb-mongodb
-    databaseName: iwoweb
-    user: iwoweb
+  - name: flipbase-mongodb
+    databaseName: flipbase
+    user: flipbase

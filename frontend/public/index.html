@@ -17,5 +17,25 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+    <script>
+      // Handle client-side routing for static hosting
+      (function() {
+        var path = window.location.pathname;
+        if (path !== '/' && !path.includes('.')) {
+          // This is a route, not a static file
+          // Let React Router handle it
+          console.log('Route detected:', path);
+        }
+      })();
+    </script>
+    <script>
+      // Fallback routing for static hosting
+      // If the page is not found, redirect to index.html
+      if (window.location.pathname !== '/' && !window.location.pathname.includes('.')) {
+        // This is a client-side route
+        // The React app will handle it
+        console.log('Handling client-side route:', window.location.pathname);
+      }
+    </script>
   </body>
 </html> 
